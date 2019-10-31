@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Webpage </title>
+<link rel = "stylesheet" type = "text/css" href = "stylesheet.css">
+<link rel = "stylesheet" href = "jquery-ui/jquery-ui.css">
+<link rel = "stylesheet" href = "jquery-ui/jquery-ui.structure.css">
+<link rel = "stylesheet" href = "jquery-ui/jquery-ui.theme.css">
+</head>
+<body>
+<div id = "navbar">
+<ul>
+<li> Iron man 
+<ul>  	
+	<li> History </li>
+	<li> Armour
+		<ul>
+		   <li> Mark 1 </li>
+                   <li> Mark 15 </li>
+		</ul>
+	</li>
+</ul>
+</li>
+<li> Captain America
+<ul>
+<li> History </li>
+<li> Shield </li>
+</li>
+</ul>
+<li> Thor </li>
+<li> Hulk </li>
+<li> Black Widow </li>
+<li> Hawkeye </li>
+</ul>
+</div>
+<div id = "sidebar">
+<div class = "toggle-btn" onclick = "togglesidebar()">
+<span> </span>
+<span> </span>
+<span> </span>
+</div>
+<!--<div class = "toggle-btn1" onclick = "normal()">
+<span> </span>
+<span> </span>
+<span> </span>
+</div>-->
+<ul>
+<li> <a href = ""> Home </a>
+<li> <a href = ""> About </a>
+<li> <a href = ""> Contact </a>
+</ul>
+</div>
+<div class = "login-box">
+<p class = "heading"> Assemble </p>
+<form id = "page" action = "message.html" method = "post" onsubmit = "return validate()">
+<p> <label> Username : </label> <input type = "text" placeholder = "Enter your username" id = "name"></p>
+<p> <label> Password : </label> <input type = "password" placeholder = "Enter your password" id = "password"> </p>
+<p> <label> Email : </label> <input type = "email" placeholder = "Enter your email id" id = "email"> </p>
+<p> <label> Security Question : </label>
+<select>
+<option> What is your first pet name? </option>
+<option> What is your nick name? </option>
+<option> What is your favourite movie? </option>
+<option selected> Where were you born? </option> </select> </p>
+<input type = "text" id = "answer" placeholder = "Your answer here">
+<input type = "submit" class = "btn" value = "login">
+</form>
+<a href = "" class = "forgot_password"> Forgot password </a>
+</div>
+<script src = "jscode.js"> </script>
+<script src = "jquery-3.4.1.js"> </script>
+<script src = "jquery-ui/jquery-ui.js"> </script>
+<script>
+$(document).ready(function() {
+$("input").focus(function() {
+$(this).css({"box-shadow" : "0 0 5px orange", "border-bottom" : "none"});
+});
+$("input").blur(function() {
+$(this).css({"box-shadow" : "none", "border-bottom" : "2px solid white"});
+});
+$("select").selectmenu();
+});
+</script>
+</body>
+</html>
